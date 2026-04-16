@@ -1,0 +1,32 @@
+DROP DATABASE IF EXISTS examen2_bohorquez;
+
+CREATE DATABASE examen2_bohorquez;
+
+USE examen2_bohorquez;
+
+
+CREATE TABLE propietario(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
+
+
+CREATE TABLE inmueble(
+    codigo VARCHAR(20) PRIMARY KEY,
+    direccion VARCHAR(150) NOT NULL,
+    precio DOUBLE NOT NULL,
+    extra VARCHAR(100),
+    id_propietario INT,
+    FOREIGN KEY (id_propietario) REFERENCES propietario(id)
+);
+
+
+INSERT INTO propietario(nombre) VALUES
+('Carlos Perez'),
+('Ana Martinez'),
+('Juan Rodriguez');
+
+
+INSERT INTO inmueble(codigo,direccion,precio,extra,id_propietario) VALUES
+('APT001','Calle 80 #45-10',350000000,'Piso 3',1),
+('APT002','Av Boyaca #72-15',280000000,'Torre 2',2);
