@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="co.edu.poli.examen2_DanielBohorquez.controlador.ControlFormInmueble">
+
+    <Label text="GESTIÓN DE INMUEBLES"/>
+
+    <Separator/>
+
+    <Label text="CONSULTAR INMUEBLE"/>
+
+    <TextField fx:id="txtNumeroConsulta" promptText="Número inmueble"/>
+
+    <Button text="Consultar"
+            onAction="#pressConsulta"/>
+
+    <TextArea fx:id="txtResultado"
+              prefHeight="120"/>
+
+    <Separator/>
+
+    <Label text="CREAR INMUEBLE"/>
+
+    <TextField fx:id="txtNumeroCrear"
+               promptText="Número inmueble"/>
+
+    <DatePicker fx:id="dateCompra"/>
+
+    <ComboBox fx:id="cmbPropietario"
+              promptText="Seleccione propietario"/>
+
+    <HBox spacing="10">
+
+        <RadioButton fx:id="radioApartamento"
+                     text="Apartamento"/>
+
+        <RadioButton fx:id="radioCasa"
+                     text="Casa"/>
+
+    </HBox>
+
+    <TextField fx:id="txtDatoExtra"
+               promptText="Piso (Apto) o Niveles (Casa)"/>
+
+    <Button text="Guardar"
+            onAction="#pressCrear"/>
+
+</VBox>
